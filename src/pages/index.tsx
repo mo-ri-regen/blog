@@ -3,6 +3,8 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { client } from "../lib/client";
 import Link from "next/link";
+import React from "react";
+import { Navigation } from "../component/navigation";
 const Home: NextPage = ({ blog }) => {
   return (
     <div className={styles.container}>
@@ -14,7 +16,7 @@ const Home: NextPage = ({ blog }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Navigation />
       <div>
         <ul>
           {blog.map((blog) => (

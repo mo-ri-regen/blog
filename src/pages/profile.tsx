@@ -4,6 +4,7 @@ import { Navigation } from "../component/navigation";
 const Profile: NextPage = () => {
   return (
     <div>
+      <Navigation />
       <h1>Profile</h1>
     </div>
   );
