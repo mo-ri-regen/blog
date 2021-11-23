@@ -1,11 +1,14 @@
 import type { NextPage } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { client } from "../lib/client";
 import Link from "next/link";
 import React from "react";
 import { Navigation } from "../component/navigation";
-const Home: NextPage = ({ blog }) => {
+import { blog } from "../common/type";
+
+const Home: NextPage = ({ articles }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,13 +19,15 @@ const Home: NextPage = ({ blog }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation />
+      <header>
+        <Navigation />
+      </header>
       <div>
         <ul>
-          {blog.map((blog) => (
-            <li key={blog.id}>
-              <Link href={`${blog.link}`}>
-                <a>{blog.title}</a>
+          {articles.map((article: blog) => (
+            <li key={article.id}>
+              <Link href={`${article.link}`}>
+                <a>{article.title}</a>
               </Link>
             </li>
           ))}
@@ -34,12 +39,12 @@ const Home: NextPage = ({ blog }) => {
 
 export default Home;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await client.get({ endpoint: "tech-article" });
 
   return {
     props: {
-      blog: data.contents,
+      articles: data.contents,
     },
   };
 };
