@@ -8,7 +8,7 @@ import React from "react";
 import { Navigation } from "../component/navigation";
 import { blog } from "../common/type";
 
-const Home: NextPage = ({ articles }) => {
+const Home: NextPage = ({ articles }: any) => {
   return (
     <div className={styles.container}>
       <Head>
