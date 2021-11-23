@@ -5,7 +5,7 @@ import { client } from "../lib/client";
 import Link from "next/link";
 import React from "react";
 import { Navigation } from "../component/navigation";
-const Home: NextPage = ({ blog }) => {
+const Home: NextPage = ({ articles }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,10 +19,10 @@ const Home: NextPage = ({ blog }) => {
       <Navigation />
       <div>
         <ul>
-          {blog.map((blog) => (
-            <li key={blog.id}>
-              <Link href={`${blog.link}`}>
-                <a>{blog.title}</a>
+          {articles.map((article: blog) => (
+            <li key={article.id}>
+              <Link href={`${article.link}`}>
+                <a>{article.title}</a>
               </Link>
             </li>
           ))}
@@ -39,7 +39,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      blog: data.contents,
+      articles: data.contents,
     },
   };
 };
