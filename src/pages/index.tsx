@@ -1,10 +1,13 @@
 import type { NextPage } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { client } from "../lib/client";
 import Link from "next/link";
 import React from "react";
 import { Navigation } from "../component/navigation";
+import { blog } from "../common/type";
+
 const Home: NextPage = ({ articles }) => {
   return (
     <div className={styles.container}>
@@ -34,7 +37,7 @@ const Home: NextPage = ({ articles }) => {
 
 export default Home;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await client.get({ endpoint: "tech-article" });
 
   return {
