@@ -19,7 +19,9 @@ const Home: NextPage = ({ articles }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation />
+      <header>
+        <Navigation />
+      </header>
       <div>
         <ul>
           {articles.map((article: blog) => (
