@@ -12,11 +12,8 @@ const Home: NextPage = ({ articles }: any) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>記事を書けば</title>
-        <meta
-          name="description"
-          content="自分が今までアウトプットしてきた作品"
-        />
+        <title>アウトプットまとめ</title>
+        <meta name="description" content="アウトプットまとめ" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
