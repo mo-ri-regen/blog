@@ -31,7 +31,6 @@ const Home: NextPage = ({ articles }: any) => {
           ))}
         </ul>
       </div>
-      <aside>aa</aside>
       <Footer></Footer>
     </div>
   );
