@@ -3,7 +3,7 @@ import Link from "next/link";
 import "remixicon/fonts/remixicon.css";
 export const Footer = () => {
   return (
-    <div className="bg-green-200 absolute bottom-0 inset-x-0 h-8">
+    <div className="absolute inset-x-0 bottom-0 h-8 bg-green-200">
       <footer className="flex justify-center gap-x-4">
         <Link href="https://twitter.com/mo_ri_regen">
           <a>
