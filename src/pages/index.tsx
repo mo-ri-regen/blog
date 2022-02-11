@@ -4,7 +4,6 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { client } from "../lib/client";
 import Link from "next/link";
-import React from "react";
 import { Navigation } from "../../src/component/layout/container/navigation";
 import { blog } from "../common/type";
 import { Footer } from "../component/layout/container/footer";
