@@ -6,6 +6,9 @@ const Profile: NextPage = () => {
     <div>
       <Header />
       <h1>Profile</h1>
+      <main className="relative top-8 left-8">
+      </main>
+      <Footer />
     </div>
   );
 };

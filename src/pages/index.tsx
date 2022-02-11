@@ -17,8 +17,9 @@ const Home: NextPage = ({ articles }: any) => {
       </Head>
       <Header />
 
-      <div>
-        <ul>
+      <main className="relative top-32 left-32">
+        <h1>活動内容</h1>
+        <ul className="font-medium">
           {articles.map((article: blog) => (
             <li key={article.id}>
               <Link href={`${article.link}`}>
@@ -27,7 +28,7 @@ const Home: NextPage = ({ articles }: any) => {
             </li>
           ))}
         </ul>
-      </div>
+      </main>
       <Footer />
     </div>
   );
