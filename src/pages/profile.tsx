@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import React from "react";
 import { Footer } from "../component/layout/container/footer";
-import { Navigation } from "../component/layout/container/navigation";
+import { Header } from "../component/layout/container/header";
 const Profile: NextPage = () => {
   return (
     <div>
-      <Navigation />
+      <Header />
       <h1>Profile</h1>
     </div>
   );

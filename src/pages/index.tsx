@@ -4,7 +4,7 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { client } from "../lib/client";
 import Link from "next/link";
-import { Navigation } from "../../src/component/layout/container/navigation";
+import { Header } from "../component/layout/container/header";
 import { blog } from "../common/type";
 import { Footer } from "../component/layout/container/footer";
 
@@ -16,9 +16,7 @@ const Home: NextPage = ({ articles }: any) => {
         <meta name="description" content="アウトプットまとめ" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <Navigation />
-      </header>
+      <Header />
 
       <div>
         <ul>

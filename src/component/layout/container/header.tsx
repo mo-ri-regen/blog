@@ -1,10 +1,8 @@
-import React from "react";
-import type { NextPage } from "next";
 import Link from "next/link";
-export const Navigation = () => {
+export const Header = () => {
   return (
-    <>
-      <nav>
+    <header className="absolute inset-x-0 top-0 h-8 bg-green-200">
+      <nav className="flex justify-center gap-x-4">
         <Link href="/">
           <a>Home</a>
         </Link>
@@ -12,6 +10,6 @@ export const Navigation = () => {
           <a>profile</a>
         </Link>
       </nav>
-    </>
+    </header>
   );
 };
