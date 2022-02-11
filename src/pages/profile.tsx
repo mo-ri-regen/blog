@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import React from "react";
-import { Navigation } from "../component/navigation";
+import { Footer } from "../component/layout/container/footer";
+import { Header } from "../component/layout/container/header";
 const Profile: NextPage = () => {
   return (
     <div>
-      <Navigation />
+      <Header />
       <h1>Profile</h1>
     </div>
   );
