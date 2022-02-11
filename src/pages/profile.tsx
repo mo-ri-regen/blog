@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import React from "react";
 import { Footer } from "../component/layout/container/footer";
 import { Header } from "../component/layout/container/header";
 const Profile: NextPage = () => {

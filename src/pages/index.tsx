@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import styles from "../../styles/Home.module.css";
 import { client } from "../lib/client";
 import Link from "next/link";
 import { Header } from "../component/layout/container/header";
@@ -10,7 +9,7 @@ import { Footer } from "../component/layout/container/footer";
 
 const Home: NextPage = ({ articles }: any) => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>アウトプットまとめ</title>
         <meta name="description" content="アウトプットまとめ" />
