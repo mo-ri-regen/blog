@@ -7,7 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { Navigation } from "../component/navigation";
 import { blog } from "../common/type";
-import Footer from "../component/layout/container/footer";
+import { Footer } from "../component/layout/container/footer";
 
 const Home: NextPage = ({ articles }: any) => {
   return (
@@ -20,6 +20,7 @@ const Home: NextPage = ({ articles }: any) => {
       <header>
         <Navigation />
       </header>
+
       <div>
         <ul>
           {articles.map((article: blog) => (
