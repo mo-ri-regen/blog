@@ -8,9 +8,9 @@ const Profile: NextPage = ({ articles }: any) => {
   return (
     <div>
       <Header />
-      <main className="relative top-8 left-8">
       <h1>プロフィール</h1>
 
+      <main className="relative top-32 left-32">
         <h1>取得資格</h1>
         <ul className="font-medium">
           {articles.map((article: ProfileType) => (
