@@ -9,6 +9,9 @@ export const Header = () => {
         <Link href="/profile">
           <a>profile</a>
         </Link>
+        <Link href="/certification">
+          <a>certification</a>
+        </Link>
       </nav>
     </header>
   );
