@@ -4,7 +4,7 @@ import Head from "next/head";
 import { client } from "../lib/client";
 import Link from "next/link";
 import { Header } from "../component/layout/container/header";
-import { blog } from "../common/type";
+import { content } from "../common/content-type";
 import { Footer } from "../component/layout/container/footer";
 
 const Home: NextPage = ({ articles }: any) => {
@@ -20,7 +20,7 @@ const Home: NextPage = ({ articles }: any) => {
       <main className="relative top-32 left-32">
         <h1>活動内容</h1>
         <ul className="font-medium">
-          {articles.map((article: blog) => (
+          {articles.map((article: content) => (
             <li key={article.id}>
               <Link href={`${article.link}`}>
                 <a>{article.title}</a>
