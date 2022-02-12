@@ -4,10 +4,12 @@ import Head from "next/head";
 import { client } from "../lib/client";
 import Link from "next/link";
 import { Header } from "../component/layout/container/header";
-import { content } from "../common/content-type";
+import { CertificationType } from "../common/certification-type";
 import { Footer } from "../component/layout/container/footer";
+import { format } from "date-fns";
 
-const Home: NextPage = ({ articles }: any) => {
+const Certification: NextPage = ({ articles }: any) => {
+  console.log(articles);
   return (
     <div>
       <Head>
@@ -18,10 +20,13 @@ const Home: NextPage = ({ articles }: any) => {
       <Header />
 
       <main className="relative top-32 left-32">
-        <h1>活動内容</h1>
+        <h1>取得資格</h1>
         <ul className="font-medium">
-          {articles.map((article: content) => (
+          {articles.map((article: CertificationType) => (
             <li key={article.id}>
+              <p className="inline-block m-2">
+                {format(new Date(article.date), "yyyy-MM-dd")}
+              </p>
               <Link href={`${article.link}`}>
                 <a>{article.title}</a>
               </Link>
@@ -34,10 +39,10 @@ const Home: NextPage = ({ articles }: any) => {
   );
 };
 
-export default Home;
+export default Certification;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await client.get({ endpoint: "tech-article" });
+  const data = await client.get({ endpoint: "certification" });
 
   return {
     props: {

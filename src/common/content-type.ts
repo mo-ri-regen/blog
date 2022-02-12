@@ -1,7 +1,7 @@
-type blog = {
+type content = {
   id: string;
   title: string;
   link: string;
 };
 
-export type { blog };
+export type { content };
